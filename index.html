@@ -40,6 +40,23 @@
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
     }
 
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 8px;
+    }
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      padding: 6px;
+    }
+
     h1 {
       margin: 0;
       font-size: 2rem;
@@ -81,16 +98,46 @@
       font-size: 0.95rem;
       color: #6b7280;
     }
+
+    .about {
+      margin-top: 20px;
+      padding: 14px 16px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .about h2 {
+      margin: 0 0 6px 0;
+      font-size: 1.05rem;
+      color: #111827;
+    }
+
+    .about p {
+      margin: 0;
+    }
   </style>
 </head>
 <body>
   <main class="container">
-    <h1>samsoftwareapp</h1>
+    <div class="brand">
+      <img class="logo" src="assets/logo.png" alt="Logo Samsoft">
+      <h1>samsoftwareapp</h1>
+    </div>
     <p>Halaman ini adalah menu awal. Pilih halaman yang ingin dibuka.</p>
 
     <nav class="menu">
       <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
     </nav>
+
+    <section class="about">
+      <h2>Tentang Pengembang</h2>
+      <p>
+        Samsoft adalah pengembang software yang membangun aplikasi mobile dan solusi digital
+        dengan fokus pada pengalaman pengguna yang sederhana, performa yang stabil, dan
+        pengelolaan data yang bertanggung jawab.
+      </p>
+    </section>
 
     <p class="hint">Tambahkan link menu lain di sini jika nanti ada halaman tambahan.</p>
   </main>
