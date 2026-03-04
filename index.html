@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>samsoftwareapp</title>
+  <title>Samsoft Developer Portal</title>
   <style>
     :root {
-      --bg: #eef2ff;
+      --bg: #e2e8f0;
       --card: #ffffff;
-      --text: #1f2937;
-      --muted: #4b5563;
-      --accent: #0f766e;
-      --accent-dark: #115e59;
-      --border: #d1d5db;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #0b6e4f;
+      --accent-dark: #07543c;
+      --border: #cbd5e1;
+      --panel: #f8fafc;
+      --badge: #ecfeff;
     }
 
     * {
@@ -22,36 +24,46 @@
     body {
       margin: 0;
       min-height: 100vh;
-      padding: 24px;
-      background: linear-gradient(180deg, var(--bg) 0%, #f8fafc 45%);
+      padding: 20px;
+      background:
+        radial-gradient(circle at 20% 10%, #bfdbfe 0%, transparent 32%),
+        radial-gradient(circle at 85% 0%, #a7f3d0 0%, transparent 30%),
+        linear-gradient(180deg, var(--bg) 0%, #f8fafc 52%);
       color: var(--text);
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: "Trebuchet MS", "Gill Sans", "Segoe UI", sans-serif;
       display: grid;
       place-items: center;
     }
 
     .container {
       width: 100%;
-      max-width: 780px;
+      max-width: 860px;
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
     }
 
     .brand {
       display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .identity {
+      display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 8px;
     }
 
     .logo {
-      width: 64px;
-      height: 64px;
+      width: 68px;
+      height: 68px;
       object-fit: contain;
-      border-radius: 12px;
+      border-radius: 14px;
       border: 1px solid var(--border);
       background: #ffffff;
       padding: 6px;
@@ -59,87 +71,168 @@
 
     h1 {
       margin: 0;
-      font-size: 2rem;
-      color: #111827;
+      font-size: 2.05rem;
+      color: #0b1020;
       line-height: 1.2;
     }
 
-    p {
+    .subtitle {
+      margin: 4px 0 0;
       color: var(--muted);
-      margin-top: 10px;
+      font-size: 0.96rem;
     }
 
-    .menu {
+    .badge {
+      align-self: center;
+      background: var(--badge);
+      color: #0f766e;
+      border: 1px solid #a5f3fc;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .menu-grid {
       margin-top: 24px;
       display: grid;
       gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
-    .menu a {
+    .menu-card {
       display: block;
       text-decoration: none;
-      background: #f8fafc;
+      background: var(--panel);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 14px 16px;
-      color: #111827;
-      font-weight: 600;
-      transition: all 0.2s ease;
+      border-radius: 14px;
+      padding: 16px;
+      color: inherit;
+      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .menu a:hover {
+    .menu-card:hover {
       border-color: var(--accent);
-      color: var(--accent-dark);
       transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(11, 110, 79, 0.1);
     }
 
-    .hint {
-      margin-top: 18px;
-      font-size: 0.95rem;
-      color: #6b7280;
+    .menu-card .tag {
+      margin: 0;
+      color: #0f766e;
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .menu-card h2 {
+      margin: 5px 0;
+      color: #0f172a;
+      font-size: 1.15rem;
+    }
+
+    .menu-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.45;
+    }
+
+    .menu-card .cta {
+      margin-top: 12px;
+      display: inline-block;
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 0.9rem;
     }
 
     .about {
-      margin-top: 20px;
-      padding: 14px 16px;
-      background: #f8fafc;
+      margin-top: 18px;
+      padding: 16px;
+      background: var(--panel);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 14px;
     }
 
     .about h2 {
-      margin: 0 0 6px 0;
-      font-size: 1.05rem;
-      color: #111827;
+      margin: 0 0 8px;
+      font-size: 1.12rem;
+      color: #0f172a;
     }
 
     .about p {
       margin: 0;
+      color: var(--muted);
+    }
+
+    .developer-meta {
+      margin-top: 10px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .developer-meta span {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 0.83rem;
+      color: #334155;
+    }
+
+    .footnote {
+      margin-top: 14px;
+      color: #64748b;
+      font-size: 0.84rem;
     }
   </style>
 </head>
 <body>
   <main class="container">
     <div class="brand">
-      <img class="logo" src="assets/logo.png" alt="Logo Samsoft">
-      <h1>samsoftwareapp</h1>
+      <div class="identity">
+        <img class="logo" src="assets/logo.png" alt="Logo Samsoft">
+        <div>
+          <h1>samsoftwareapp</h1>
+          <p class="subtitle">Developer portal resmi Samsoft</p>
+        </div>
+      </div>
+      <div class="badge">Software Developer</div>
     </div>
-    <p>Halaman ini adalah menu awal. Pilih halaman yang ingin dibuka.</p>
 
-    <nav class="menu">
-      <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+    <nav class="menu-grid">
+      <a class="menu-card" href="kebijakan-privasi.html">
+        <p class="tag">Legal</p>
+        <h2>Kebijakan Privasi</h2>
+        <p>Dokumen privasi resmi untuk publikasi aplikasi di Google Play.</p>
+        <span class="cta">Buka Halaman</span>
+      </a>
+      <a class="menu-card" href="mailto:samsoftwareapp.dev@gmail.com">
+        <p class="tag">Support</p>
+        <h2>Kontak Pengembang</h2>
+        <p>Hubungi Samsoft untuk bantuan teknis, kerja sama, dan pertanyaan privasi.</p>
+        <span class="cta">Kirim Email</span>
+      </a>
     </nav>
 
     <section class="about">
       <h2>Tentang Pengembang</h2>
       <p>
-        Samsoft adalah pengembang software yang membangun aplikasi mobile dan solusi digital
-        dengan fokus pada pengalaman pengguna yang sederhana, performa yang stabil, dan
-        pengelolaan data yang bertanggung jawab.
+        Samsoft adalah pengembang software yang berfokus pada pengembangan aplikasi mobile
+        dan solusi digital praktis dengan prioritas pada performa, keamanan data, dan
+        kejelasan pengalaman pengguna.
       </p>
+      <div class="developer-meta">
+        <span>Android Apps</span>
+        <span>Product Engineering</span>
+        <span>Privacy First</span>
+      </div>
     </section>
-
-    <p class="hint">Tambahkan link menu lain di sini jika nanti ada halaman tambahan.</p>
+    <p class="footnote">Samsoft Developer Portal - 2026</p>
   </main>
 </body>
 </html>
