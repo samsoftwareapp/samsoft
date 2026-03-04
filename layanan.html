@@ -1,0 +1,203 @@
+﻿<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layanan - Samsoft</title>
+  <style>
+    :root {
+      --bg: #e2e8f0;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #0b6e4f;
+      --accent-dark: #07543c;
+      --border: #cbd5e1;
+      --panel: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 20px;
+      background:
+        radial-gradient(circle at 20% 10%, #bfdbfe 0%, transparent 32%),
+        radial-gradient(circle at 85% 0%, #a7f3d0 0%, transparent 30%),
+        linear-gradient(180deg, var(--bg) 0%, #f8fafc 52%);
+      color: var(--text);
+      font-family: "Trebuchet MS", "Gill Sans", "Segoe UI", sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+    }
+
+    .back-link a {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--accent-dark);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #0b1020;
+    }
+
+    .intro {
+      margin-top: 8px;
+      color: var(--muted);
+    }
+
+    .service-grid {
+      margin-top: 20px;
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .service-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .service-card h2 {
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+      color: #0f172a;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .workflow {
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #f8fafc;
+    }
+
+    .workflow h2 {
+      margin: 0 0 8px;
+      font-size: 1.04rem;
+    }
+
+    .workflow ol {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .cta {
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid #a7f3d0;
+      background: #ecfdf5;
+    }
+
+    .cta h2 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      color: #065f46;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .actions a {
+      text-decoration: none;
+      color: #0f172a;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .actions a:hover {
+      border-color: var(--accent);
+      color: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="back-link"><a href="index.html">Kembali ke Beranda</a></div>
+    <h1>Layanan Samsoft</h1>
+    <p class="intro">
+      Layanan rekayasa software dan hardware dengan fokus pada low-level system, otomasi industri, embedded, dan software aplikasi.
+    </p>
+
+    <section class="service-grid">
+      <article class="service-card">
+        <h2>PLC &amp; SCADA</h2>
+        <p>Integrasi sistem kontrol industri, monitoring proses, dan otomasi berbasis PLC/SCADA.</p>
+      </article>
+      <article class="service-card">
+        <h2>Microcontroller (ESP32, STM32, dll)</h2>
+        <p>Pengembangan perangkat embedded untuk IoT, sensor, aktuator, dan kontrol perangkat lapangan.</p>
+      </article>
+      <article class="service-card">
+        <h2>Firmware Flashing &amp; Komunikasi Serial</h2>
+        <p>Flashing firmware, debugging, dan implementasi komunikasi UART, SPI, I2C, serta USB CDC.</p>
+      </article>
+      <article class="service-card">
+        <h2>Perbaikan Hardware Laptop &amp; Elektronik</h2>
+        <p>Diagnosa, troubleshooting, dan perbaikan komponen elektronik untuk laptop serta perangkat terkait.</p>
+      </article>
+      <article class="service-card">
+        <h2>Pengembangan Software Desktop &amp; Web</h2>
+        <p>Pembuatan aplikasi desktop dan web untuk operasional bisnis, tooling internal, dan dashboard.</p>
+      </article>
+    </section>
+
+    <section class="workflow">
+      <h2>Alur Kerja Teknis</h2>
+      <ol>
+        <li>Analisis kebutuhan sistem (hardware dan software).</li>
+        <li>Perancangan arsitektur, protokol komunikasi, dan rencana implementasi.</li>
+        <li>Pengembangan, pengujian lapangan/lab, dan tuning performa.</li>
+        <li>Deployment, dokumentasi teknis, dan support pasca implementasi.</li>
+      </ol>
+    </section>
+
+    <section class="cta">
+      <h2>Mulai Diskusi Proyek</h2>
+      <div class="actions">
+        <a href="mailto:samsoftwareapp@gmail.com">Email</a>
+        <a href="https://wa.me/6281234567890?text=Halo%20Samsoft%2C%20saya%20ingin%20diskusi%20proyek." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://t.me/samsoftwareapp" target="_blank" rel="noopener noreferrer">Telegram</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+

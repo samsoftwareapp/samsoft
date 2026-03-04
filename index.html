@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -15,6 +15,7 @@
       --border: #cbd5e1;
       --panel: #f8fafc;
       --badge: #ecfeff;
+      --soft: #f1f5f9;
     }
 
     * {
@@ -189,6 +190,50 @@
       color: #64748b;
       font-size: 0.84rem;
     }
+
+    .quick-contact {
+      margin-top: 16px;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--soft);
+    }
+
+    .quick-contact h2 {
+      margin: 0;
+      font-size: 1.05rem;
+      color: #0f172a;
+    }
+
+    .quick-contact p {
+      margin: 6px 0 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .contact-actions a {
+      text-decoration: none;
+      color: #0f172a;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .contact-actions a:hover {
+      border-color: var(--accent);
+      color: var(--accent-dark);
+      transform: translateY(-1px);
+    }
   </style>
 </head>
 <body>
@@ -198,13 +243,25 @@
         <img class="logo" src="assets/logo.png" alt="Logo Samsoft">
         <div>
           <h1>samsoftwareapp</h1>
-          <p class="subtitle">Developer portal resmi Samsoft</p>
+          <p class="subtitle">Software engineer low-level system dan hardware</p>
         </div>
       </div>
-      <div class="badge">Software Developer</div>
+      <div class="badge">Low-Level Engineer</div>
     </div>
 
     <nav class="menu-grid">
+      <a class="menu-card" href="portofolio.html">
+        <p class="tag">Projects</p>
+        <h2>Portofolio</h2>
+        <p>Lihat ringkasan proyek aplikasi dan solusi digital yang dikembangkan Samsoft.</p>
+        <span class="cta">Lihat Portofolio</span>
+      </a>
+      <a class="menu-card" href="layanan.html">
+        <p class="tag">Services</p>
+        <h2>Layanan</h2>
+        <p>Eksplor layanan PLC/SCADA, embedded system, firmware, hardware, dan software development.</p>
+        <span class="cta">Lihat Layanan</span>
+      </a>
       <a class="menu-card" href="kebijakan-privasi.html">
         <p class="tag">Legal</p>
         <h2>Kebijakan Privasi</h2>
@@ -219,20 +276,27 @@
       </a>
     </nav>
 
+    <section class="quick-contact">
+      <h2>Quick Contact</h2>
+      <p>Hubungi Samsoft melalui channel yang paling nyaman untuk Anda.</p>
+      <div class="contact-actions">
+        <a href="mailto:samsoftwareapp@gmail.com">Email</a>
+        <a href="https://wa.me/6281234567890?text=Halo%20Samsoft%2C%20saya%20ingin%20konsultasi%20aplikasi." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://t.me/samsoftwareapp" target="_blank" rel="noopener noreferrer">Telegram</a>
+      </div>
+    </section>
+
     <section class="about">
       <h2>Tentang Pengembang</h2>
       <p>
-        Samsoft adalah pengembang software yang berfokus pada pengembangan aplikasi mobile
-        dan solusi digital praktis dengan prioritas pada performa, keamanan data, dan
-        kejelasan pengalaman pengguna.
+        Samsoft adalah seorang software engineer yang banyak bekerja dengan low-level system dan hardware.
       </p>
       <div class="developer-meta">
-        <span>Android Apps</span>
-        <span>Product Engineering</span>
-        <span>Privacy First</span>
+        <span>PLC &amp; SCADA</span><span>ESP32/STM32</span><span>Firmware &amp; Serial</span><span>Hardware Repair</span><span>Desktop &amp; Web</span>
       </div>
     </section>
     <p class="footnote">Samsoft Developer Portal - 2026</p>
   </main>
 </body>
 </html>
+

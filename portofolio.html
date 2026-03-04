@@ -1,0 +1,146 @@
+﻿<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio - Samsoft</title>
+  <style>
+    :root {
+      --bg: #e2e8f0;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #0b6e4f;
+      --accent-dark: #07543c;
+      --border: #cbd5e1;
+      --panel: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 20px;
+      background:
+        radial-gradient(circle at 20% 10%, #bfdbfe 0%, transparent 32%),
+        radial-gradient(circle at 85% 0%, #a7f3d0 0%, transparent 30%),
+        linear-gradient(180deg, var(--bg) 0%, #f8fafc 52%);
+      color: var(--text);
+      font-family: "Trebuchet MS", "Gill Sans", "Segoe UI", sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+    }
+
+    .back-link a {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--accent-dark);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #0b1020;
+    }
+
+    .intro {
+      margin-top: 8px;
+      color: var(--muted);
+    }
+
+    .project-grid {
+      margin-top: 20px;
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+
+    .project-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .project-card .tag {
+      margin: 0;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #0f766e;
+      font-weight: 700;
+    }
+
+    .project-card h2 {
+      margin: 6px 0;
+      font-size: 1.08rem;
+      color: #0f172a;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .status {
+      margin-top: 18px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #a7f3d0;
+      background: #ecfdf5;
+      color: #065f46;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="back-link"><a href="index.html">Kembali ke Beranda</a></div>
+    <h1>Portofolio Samsoft</h1>
+    <p class="intro">
+      Halaman ini menampilkan contoh ruang portofolio untuk proyek aplikasi dan solusi digital
+      yang dikembangkan oleh Samsoft.
+    </p>
+
+    <section class="project-grid">
+      <article class="project-card">
+        <p class="tag">Mobile App</p>
+        <h2>Aplikasi Produktivitas Android</h2>
+        <p>Aplikasi utilitas dengan fokus performa ringan, desain sederhana, dan stabil di berbagai perangkat.</p>
+      </article>
+
+      <article class="project-card">
+        <p class="tag">Web Dashboard</p>
+        <h2>Dashboard Operasional Bisnis</h2>
+        <p>Panel monitoring data bisnis dengan struktur modular untuk laporan dan pemantauan aktivitas.</p>
+      </article>
+
+      <article class="project-card">
+        <p class="tag">Landing Site</p>
+        <h2>Website Profil Produk</h2>
+        <p>Website profil layanan/aplikasi dengan konten informatif, SEO basic, dan CTA yang jelas.</p>
+      </article>
+    </section>
+
+    <p class="status">
+      Catatan: Konten proyek ini bisa Anda ganti dengan daftar aplikasi asli milik Samsoft kapan saja.
+    </p>
+  </main>
+</body>
+</html>
