@@ -57,6 +57,12 @@
       color: #0b1020;
     }
 
+    h2.section-title {
+      margin-top: 28px;
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+    }
+
     .intro {
       margin-top: 8px;
       color: var(--muted);
@@ -98,6 +104,33 @@
       line-height: 1.5;
     }
 
+    .skills-grid{
+      margin-top:12px;
+      display:grid;
+      gap:12px;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    }
+
+    .skill-card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:14px;
+    }
+
+    .skill-card h3{
+      margin:0 0 6px 0;
+      font-size:1rem;
+      color:#0f172a;
+    }
+
+    .skill-card p{
+      margin:0;
+      font-size:0.9rem;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
     .status {
       margin-top: 18px;
       padding: 12px;
@@ -111,12 +144,82 @@
 </head>
 <body>
   <main class="container">
+
     <div class="back-link"><a href="index.html">Kembali ke Beranda</a></div>
+
     <h1>Portofolio Samsoft</h1>
+
     <p class="intro">
-      Halaman ini menampilkan contoh ruang portofolio untuk proyek aplikasi dan solusi digital
-      yang dikembangkan oleh Samsoft.
+      Samsoft merupakan pengembang solusi perangkat lunak dan sistem embedded
+      yang berfokus pada integrasi software, firmware, dan hardware untuk
+      kebutuhan bisnis, otomasi, serta perangkat elektronik.
     </p>
+
+
+    <!-- KEAHLIAN -->
+    <h2 class="section-title">Keahlian</h2>
+
+    <section class="skills-grid">
+
+      <div class="skill-card">
+        <h3>Embedded System Development</h3>
+        <p>
+          Pengembangan firmware dan sistem embedded menggunakan ESP32,
+          STM32, serta mikrokontroler lainnya untuk aplikasi IoT,
+          perangkat kontrol, dan sistem otomasi.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Industrial Automation</h3>
+        <p>
+          Implementasi sistem otomasi industri menggunakan PLC,
+          SCADA, komunikasi serial, serta integrasi perangkat
+          industri untuk monitoring dan kontrol sistem.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Desktop Software Development</h3>
+        <p>
+          Pengembangan aplikasi desktop menggunakan C#,
+          WinForms, dan komunikasi perangkat melalui UART,
+          USB CDC, SPI, dan protokol perangkat khusus.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Hardware Diagnostics & Repair</h3>
+        <p>
+          Analisis kerusakan hardware elektronik, laptop,
+          dan mainboard termasuk troubleshooting regulator,
+          IC controller, serta komponen power dan display.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>System Integration</h3>
+        <p>
+          Integrasi software, database, dan perangkat hardware
+          menjadi sistem yang stabil untuk kebutuhan bisnis
+          seperti sistem kasir, perangkat kontrol, dan alat monitoring.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Web & API Development</h3>
+        <p>
+          Pengembangan backend API, integrasi database online,
+          serta dashboard web untuk mendukung aplikasi
+          desktop dan mobile.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- PROJECT -->
+    <h2 class="section-title">Contoh Proyek</h2>
 
     <section class="project-grid">
       <article class="project-card">
@@ -126,19 +229,18 @@
       </article>
 
       <article class="project-card">
-        <p class="tag">Web Dashboard</p>
-        <h2>Dashboard Operasional Bisnis</h2>
-        <p>Panel monitoring data bisnis dengan struktur modular untuk laporan dan pemantauan aktivitas.</p>
+        <p class="tag">Desktop System</p>
+        <h2>Sistem Kasir Desktop</h2>
+        <p>Aplikasi kasir desktop terintegrasi dengan database dan API untuk kebutuhan operasional bisnis skala UMKM.</p>
       </article>
 
       <article class="project-card">
-        <p class="tag">Landing Site</p>
-        <h2>Website Profil Produk</h2>
-        <p>Website profil layanan/aplikasi dengan konten informatif, SEO basic, dan CTA yang jelas.</p>
+        <p class="tag">Embedded Device</p>
+        <h2>Firmware Embedded Controller</h2>
+        <p>Pengembangan firmware perangkat berbasis mikrokontroler untuk komunikasi perangkat, flashing firmware, dan kontrol hardware.</p>
       </article>
     </section>
 
-  
   </main>
 </body>
 </html>
